@@ -4,7 +4,7 @@ import AccessToken from "./accessToken."
 
 export default function Login() {
     const { data: session } = useSession()
-    if (session) {
+    if (session && session.user) {
         return (
             <>
                 Signed in as {session.user.email} <br />
